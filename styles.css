@@ -1,16 +1,17 @@
-/* 
- * Custom Styles for Portfolio
- * Primarily used for animations and complex effects not easily handled by Tailwind utilities
- */
+/* Custom Utilities */
+.glass-nav {
+    background: rgba(11, 17, 33, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #0b1121;
-    /* Match Tailwind bg-slate-950/custom */
-    color: #f8fafc;
-    overflow-x: hidden;
+.text-gradient {
+    background: linear-gradient(to right, #14b8a6, #2dd4bf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 /* Custom Scrollbar */
@@ -31,7 +32,7 @@ body {
     background: #334155;
 }
 
-/* Star Animation */
+/* Star Animation Canvas */
 #star-canvas {
     position: absolute;
     top: 0;
@@ -40,20 +41,4 @@ body {
     height: 100%;
     z-index: 0;
     pointer-events: none;
-}
-
-/* Utilities */
-.glass-nav {
-    background: rgba(11, 17, 33, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.text-gradient {
-    background: linear-gradient(to right, #14b8a6, #2dd4bf);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
 }
